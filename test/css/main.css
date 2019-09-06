@@ -1,0 +1,224 @@
+
+/*Подключение шрифтов*/
+
+@font-face {
+	font-family: "GothamProBold";
+	src: url("../fonts/GothamProBold/GothamProBold.eot");
+	src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GothamProBold/GothamProBold.woff") format("woff"),
+	url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "GothamProMedium";
+	src: url("../fonts/GothamProMedium/GothamProMedium.eot");
+	src: url("../fonts/GothamProMedium/GothamProMedium.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GothamProMedium/GothamProMedium.woff") format("woff"),
+	url("../fonts/GothamProMedium/GothamProMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+body {
+	background: url(../images/background.png);
+	background-position: center center;  
+	background-repeat: no-repeat; 
+	background-attachment: fixed;
+	background-size: cover; 
+	margin: 0;
+}
+
+/*Логотип*/
+
+.logo, .footer {
+	height: 100%;
+}
+
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.page {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 80px;
+}
+
+/*Форма авторизации*/
+
+.authorization {
+	width: 100%;
+	max-width: 504px;
+	text-align: center;;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #FFF;
+	border-radius: 8px;
+	padding: 0 48px;
+}
+
+.authorization__title {
+	font-family: "GothamProBold";
+	font-size: 24px;
+	line-height: 29px;
+	color: #262626;
+	text-align: center;
+	margin-top: 48px;
+	margin-bottom: 16px;
+}
+
+.authorization__form {
+	width: 100%;
+}
+
+.authorization__input {
+	display: block;
+	width: 100%;
+	background: #F1F1F1;
+    border-radius: 4px;
+	border: none;
+	font-family: "GothamProMedium";
+	font-size: 16px;
+	line-height: 44px;
+	color: #262626;
+	opacity: 0.4;
+	padding-left: 16px;
+	outline: none;
+	margin: 32px 0;
+	border: 1px solid #F1F1F1;
+	box-sizing: border-box;
+}
+
+.authorization__input:focus {
+	border: 1px solid rgba(151, 151, 151, 0.25);
+	color: #262626;
+	opacity: 0.8;
+}
+
+.authorization__button {
+	padding: 15px 53px;
+	background: #ED4159;
+	box-shadow: 0px 4px 16px rgba(237, 65, 89, 0.4);
+	border-radius: 100px;
+	border: none;
+	font-family: "GothamProMedium";
+	font-size: 14px;
+	line-height: 17px;
+	color: #fff;
+	cursor: pointer;
+	outline: none;
+	margin-top: 16px;
+	margin-bottom: 60px;
+}
+
+.authorization__button:hover {
+	background: #fff;
+	color: #ED4159;
+	box-shadow: 0px 6px 20px rgba(237, 65, 89, 0.4);
+	transition: all .2s ease-out;	
+}
+
+/*Блоки успешной или неуспешной авторизации*/
+
+.authorization__input.error {
+	border: 2px solid #ED4159;
+	color: #ED4159;
+}
+
+.done {
+	display: none;
+}
+
+.username {
+	font-family: "GothamProBold";
+	font-size: 28px;
+	line-height: 34px;
+	color: #262626;
+	opacity: 0.8;
+	margin: 38px 0;
+}
+
+.avatar {
+	width: 128px;
+	height: 128px;
+	border-radius: 100%;
+	margin-top: 48px;
+	border: 1px solid #979797;
+}
+
+.authorization__incorrect {
+	margin-bottom: 32px;
+	background: rgba(237, 65, 89, 0.25);
+	border-radius: 4px;
+
+}
+
+.authorization__incorrect p {
+	text-align: left;
+	font-family: "GothamProMedium";
+	font-size: 14px;
+	line-height: 17px;
+	color: #ED4159;
+	padding: 13px 10px;
+	padding-left: 15px;
+}
+
+/*Медиазапросы*/
+
+@media screen and (max-width: 400px) {
+	.logo img {
+		width: 182px;
+		height: 40px;
+	}
+
+	.authorization {
+		padding: 0 24px; 	
+	}
+
+	.page {
+		padding: 0 40px;
+	}
+
+	.authorization__title {
+		margin-top: 32px;
+		margin-bottom: 8px;
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.authorization__input {
+		margin: 24px 0;
+	}
+
+	.authorization__button {
+		margin-top: 12px;
+		margin-bottom: 48px;
+	}
+
+	.authorization__incorrect p {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.avatar {
+		width: 86px;
+		height: 86px;
+		margin-top: 32px;
+	}
+
+	.username {
+		margin: 24px 0;
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+
